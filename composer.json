@@ -1,0 +1,13 @@
+{
+    "name": "Test task",
+    "license": "MIT",
+    "type": "project",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-0": { "": "App/" }
+    },
+    "require": {
+        "php": ">=5.3.3"
+    }
+}

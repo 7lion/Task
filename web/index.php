@@ -6,16 +6,16 @@ $factory = new App\Factory();
 $factory->addAllowType(new \App\Types\Automatic());
 $factory->addAllowType(new \App\Types\SemiAutomatic());
 
-$robots1 = $factory->createRobots(new \App\Types\Automatic(), 2);
-$robots2 = $factory->createRobots(new \App\Types\SemiAutomatic(), 3);
+$automaticRobots = $factory->createRobots(new \App\Types\Automatic(), 2);
+$semiAutomaticRobots = $factory->createRobots(new \App\Types\SemiAutomatic(), 3);
 
-$robots = array_merge($robots1, $robots2);
+$robotsForUnion = array_merge($automaticRobots, $semiAutomaticRobots);
 
-echo 'Robots:';
-var_dump($robots);
+echo 'Robots for union:';
+var_dump($robotsForUnion);
 
 $unionRobot = new \App\UnionRobot();
-foreach ($robots as $robot) {
+foreach ($robotsForUnion as $robot) {
     $unionRobot->addRobot($robot);
 }
 

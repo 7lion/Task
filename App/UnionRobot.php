@@ -3,8 +3,14 @@ namespace App;
 
 class UnionRobot
 {
+    /**
+     * @var array of RobotInterface
+     */
     protected $robots = [];
 
+    /**
+     * @param RobotInterface $robot
+     */
     public function addRobot(RobotInterface $robot)
     {
         $this->robots[] = $robot;

@@ -8,7 +8,7 @@ class Automatic implements TypeInterface, RobotInterface
     /**
      * @return string
      */
-    public function getType()
+    public static function getType()
     {
         return 'Automatic';
     }

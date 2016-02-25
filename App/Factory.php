@@ -3,7 +3,7 @@ namespace App;
 
 use App\Types\TypeInterface;
 
-class Factory extends AbstractFactory
+class Factory
 {
     /**
      * @var array of strings
@@ -45,10 +45,12 @@ class Factory extends AbstractFactory
     protected function createByType($type)
     {
         switch ($type) {
-            case 'Automatic':
+            case Types\Automatic::getType():
                 return new Types\Automatic();
-            case 'SemiAutomatic':
+
+            case Types\SemiAutomatic::getType():
                 return new Types\SemiAutomatic();
+
             default:
                 throw new \InvalidArgumentException(
                     sprintf('Invalid type %s', $type)

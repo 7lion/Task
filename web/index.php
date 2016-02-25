@@ -27,4 +27,3 @@ var_dump($unionRobot->getWeight());
 
 echo 'Speed:';
 var_dump($unionRobot->getSpeed());
-//$robots
